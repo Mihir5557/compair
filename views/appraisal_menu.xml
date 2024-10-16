@@ -42,6 +42,6 @@
         name="Surveys"
         action="survey_action_appraisal"
         parent="aspl_hr_appraisal.menu_appraisal_configuration"
-        sequence="6"
+        sequence="30"
         groups="aspl_hr_appraisal.group_hr_appraisal_manager"/>
 </odoo>

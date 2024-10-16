@@ -24,6 +24,6 @@
         name="Appraisal Notes"
         action="action_appraisal_note"
         parent="menu_appraisal_configuration"
-        sequence="5"
+        sequence="20"
         groups="aspl_hr_appraisal.group_hr_appraisal_manager"/>
 </odoo>

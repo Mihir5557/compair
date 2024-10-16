@@ -36,6 +36,6 @@ class ResCompany(models.Model):
     send_feedback_manager = fields.Html(default=_get_default_manager_feedback_template)
     duration_after_recruitment = fields.Integer(string="Create an Appraisal after recruitment", default=6)
     month_first = fields.Integer(string="Create a first Appraisal after", default=6)
-    month_next = fields.Integer(string="Create a second Appraisal after", default=12)
+    month_next = fields.Integer(string="Create a second Appraisal after")
 
 

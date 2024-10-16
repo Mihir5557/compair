@@ -98,6 +98,6 @@
     <menuitem id="hr_appraisal_menu_configuration"
         name="Settings"
         parent="menu_appraisal_configuration"
-        sequence="100"
+        sequence="10"
         action="appraisal_config_settings_action"/>
 </odoo>

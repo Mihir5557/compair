@@ -203,8 +203,8 @@ class Appraisal(models.Model):
     @api.depends('last_appraisal_date')
     def _compute_next_appraisal_date(self):
         config_param = self.env['ir.config_parameter'].sudo()
-        months = int(config_param.get_param('appraisal.month_next', default=6))
-        
+        month_next_value = config_param.get_param('month_next')
+        months = int(month_next_value) if month_next_value else 12
         for record in self:
             if record.last_appraisal_date:
                 record.next_appraisal_date = record.last_appraisal_date + relativedelta(months=months)

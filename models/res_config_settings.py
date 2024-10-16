@@ -23,9 +23,12 @@ class ResConfigSettings(models.TransientModel):
         res = super(ResConfigSettings, self).get_values()
         # Get the value from ir.config_parameter
         res['module_hr_appraisal_survey'] = self.env['ir.config_parameter'].sudo().get_param('module_hr_appraisal_survey', default=False)
+        month_next_value = self.env['ir.config_parameter'].sudo().get_param('month_next')
+        res['month_next'] = int(month_next_value) if month_next_value else 0
         return res
 
     def set_values(self):
         super(ResConfigSettings, self).set_values()
         # Save the value in ir.config_parameter
         self.env['ir.config_parameter'].sudo().set_param('module_hr_appraisal_survey', self.module_hr_appraisal_survey)
+        self.env['ir.config_parameter'].sudo().set_param('month_next', self.month_next)
