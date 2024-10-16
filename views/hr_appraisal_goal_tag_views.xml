@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_appraisal_goal_tag_view_tree" model="ir.ui.view">
+        <field name="name">hr.appraisal.goal.tag.view.tree</field>
+        <field name="model">hr.appraisal.goal.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Tags" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_appraisal_goal_tag_action" model="ir.actions.act_window">
+        <field name="name">Goal Tags</field>
+        <field name="res_model">hr.appraisal.goal.tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Add a new tag
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_config_goal_tags"
+        name="Goal Tags"
+        groups="base.group_no_one"
+        action="hr_appraisal_goal_tag_action"
+        parent="aspl_hr_appraisal.menu_appraisal_configuration"
+        sequence="25"/>
+
+</odoo>

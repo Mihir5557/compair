@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_appraisal_appraisal,access_appraisal_appraisal,model_appraisal_appraisal,,1,1,1,1
+access_appraisal_note,access_appraisal_note,model_appraisal_note,,1,1,1,1
+access_appraisal_goal,access_appraisal_goal,model_appraisal_goal,,1,1,1,1
+access_appraisal_analysis_report,access_appraisal_analysis_report,model_appraisal_analysis_report,,1,1,1,1
+access_request_appraisal,access_request_appraisal,model_request_appraisal,,1,1,1,1
+access_hr_appraisal_goal_tag,access_hr_appraisal_goal_tag,model_hr_appraisal_goal_tag,,1,1,1,1
+access_hr_appraisal_skill_appraisal_user,hr.appraisal.skill,model_hr_appraisal_skill,,1,1,1,1
+access_hr_appraisal_skill_employee,hr.appraisal.skill,model_hr_appraisal_skill,base.group_user,1,1,1,1
+access_survey_user_input_user,survey.user_input.user,model_survey_user_input,base.group_user,1,0,0,0
+access_survey_question_answer_appraisal_manager,access.survey.question.answer.appraisal.manager,model_survey_question_answer,,1,1,1,1
+access_appraisal_ask_feedback_user,appraisal.ask.feedback.user,model_appraisal_ask_feedback,base.group_user,1,1,1,0

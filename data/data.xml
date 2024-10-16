@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ir_cron_auto_create_appraisal" model="ir.cron">
+        <field name="name">Auto Create Appraisals</field>
+        <field name="model_id" ref="model_appraisal_appraisal"/>
+        <field name="state">code</field>
+        <field name="code">model.auto_create_appraisal()</field>
+        <field name="active" eval="True"/>
+        <field name="interval_number" eval="1"/>
+        <field name="interval_type">months</field>
+        <field name="numbercall" eval="-1"/>
+        <field name="doall" eval="False"/>
+    </record>
+
+
+</odoo>

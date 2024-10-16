@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="appraisal_menu_root" name="Human Resources" sequence="10"/>
+    
+    <record id="action_appraisal" model="ir.actions.act_window">
+        <field name="name">Appraisals</field>
+        <field name="res_model">appraisal.appraisal</field>
+        <field name="view_mode">tree,form,kanban,calendar</field>
+    </record>
+
+    <menuitem id="appraisal_menu" name="Appraisals" parent="appraisal_menu_root" action="action_appraisal" sequence="10" groups="base.group_user"/>
+    <menuitem name="Configuration"
+        id="menu_appraisal_configuration"
+        parent="appraisal_menu_root"
+        sequence="99"/>
+
+    <menuitem name="Reporting"
+              id="menu_hr_appraisal_report"
+              parent="appraisal_menu_root"
+              sequence="50"/>
+    
+    <record id="survey_action_appraisal" model="ir.actions.act_window">
+        <field name="name">Surveys</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">survey.survey</field>
+        <field name="domain">[('is_appraisal', '=', True)]</field>
+        <field name="view_mode">kanban,tree,activity,form</field>
+        <field name="context">{'default_is_appraisal': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new survey
+            </p><p>
+                You can create surveys used for appraisals. Design easily your appraisal,
+                send invitations and analyze answers.
+            </p>
+        </field>
+    </record>
+    
+    <menuitem
+        id="menu_hr_appraisal_surveys"
+        name="Surveys"
+        action="survey_action_appraisal"
+        parent="aspl_hr_appraisal.menu_appraisal_configuration"
+        sequence="6"
+        groups="aspl_hr_appraisal.group_hr_appraisal_manager"/>
+</odoo>
